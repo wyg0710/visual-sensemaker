@@ -1,12 +1,12 @@
-# Visual Explainer
+# Visual Sensemaker
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 把文本、笔记、表格、文档和结构化数据转换成清晰、准确、可编辑的视觉解释图。
 
-![Visual Explainer 工作流程](examples/visual-explainer-workflow.svg)
+![Visual Sensemaker 工作流程](examples/visual-sensemaker-workflow.svg)
 
-Visual Explainer 是一个 Agent Skill。它根据源信息中的关系自动选择视觉结构，因此用户可以直接描述目标，而不必预先判断应该使用流程图、时间线、对比图、层级图、概念图还是数据图表。
+Visual Sensemaker 是一个 Agent Skill。它根据源信息中的关系自动选择视觉结构，因此用户可以直接描述目标，而不必预先判断应该使用流程图、时间线、对比图、层级图、概念图还是数据图表。
 
 ## 为什么需要它
 
@@ -15,19 +15,19 @@ Visual Explainer 是一个 Agent Skill。它根据源信息中的关系自动选
 ## 使用示例
 
 ```text
-使用 $visual-explainer 把这些会议记录转换成决策流程图。
+使用 $visual-sensemaker 把这些会议记录转换成决策流程图。
 ```
 
 ```text
-使用 $visual-explainer 比较表格中的三个方案，并生成可编辑的视觉图。
+使用 $visual-sensemaker 比较表格中的三个方案，并生成可编辑的视觉图。
 ```
 
 ```text
-使用 $visual-explainer 把这一章整理成一页复习概念图。
+使用 $visual-sensemaker 把这一章整理成一页复习概念图。
 ```
 
 ```text
-使用 $visual-explainer 检查这个 CSV，选择不误导的图表并解释主要趋势。
+使用 $visual-sensemaker 检查这个 CSV，选择不误导的图表并解释主要趋势。
 ```
 
 ## v0.1 提供的能力
@@ -46,13 +46,13 @@ Visual Explainer 是一个 Agent Skill。它根据源信息中的关系自动选
 将仓库克隆到用户级 Skill 目录：
 
 ```bash
-git clone https://github.com/wyg0710/visual-explainer.git "$HOME/.agents/skills/visual-explainer"
+git clone https://github.com/wyg0710/visual-sensemaker.git "$HOME/.agents/skills/visual-sensemaker"
 ```
 
 如果只希望在一个仓库中使用，请复制或克隆到：
 
 ```text
-<repository>/.agents/skills/visual-explainer/
+<repository>/.agents/skills/visual-sensemaker/
 ```
 
 Codex 通常会自动检测 Skill 变化；如果没有出现，请重启 Codex。
@@ -62,7 +62,7 @@ Codex 通常会自动检测 Skill 变化；如果没有出现，请重启 Codex�
 建议使用 Python 3.9 或更高版本。校验器只使用 Python 标准库。
 
 ```bash
-python scripts/check_svg.py examples/visual-explainer-workflow.svg
+python scripts/check_svg.py examples/visual-sensemaker-workflow.svg
 python -m unittest discover -s tests -v
 ```
 

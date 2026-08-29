@@ -1,12 +1,12 @@
-# Visual Explainer
+# Visual Sensemaker
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 Turn text, notes, tables, documents, and structured data into clear, accurate, editable visual explanations.
 
-![Visual Explainer workflow](examples/visual-explainer-workflow.svg)
+![Visual Sensemaker workflow](examples/visual-sensemaker-workflow.svg)
 
-Visual Explainer is an Agent Skill that chooses a visual structure from the relationships in the source material. Users can describe the outcome in ordinary language instead of deciding whether they need a flowchart, timeline, comparison, hierarchy, concept map, or data chart.
+Visual Sensemaker is an Agent Skill that chooses a visual structure from the relationships in the source material. Users can describe the outcome in ordinary language instead of deciding whether they need a flowchart, timeline, comparison, hierarchy, concept map, or data chart.
 
 ## Why it exists
 
@@ -15,19 +15,19 @@ Visual generation often fails in two ways: a polished graphic changes the source
 ## Example prompts
 
 ```text
-Use $visual-explainer to turn these meeting notes into a decision flowchart.
+Use $visual-sensemaker to turn these meeting notes into a decision flowchart.
 ```
 
 ```text
-Use $visual-explainer to compare the three plans in this table and create an editable visual.
+Use $visual-sensemaker to compare the three plans in this table and create an editable visual.
 ```
 
 ```text
-Use $visual-explainer to turn this chapter into a one-page concept map for revision.
+Use $visual-sensemaker to turn this chapter into a one-page concept map for revision.
 ```
 
 ```text
-Use $visual-explainer to inspect this CSV, choose an honest chart, and explain the main pattern.
+Use $visual-sensemaker to inspect this CSV, choose an honest chart, and explain the main pattern.
 ```
 
 ## What v0.1 provides
@@ -46,13 +46,13 @@ This is not a photo editor, illustration generator, CAD tool, or replacement for
 Clone the repository into your user skills directory:
 
 ```bash
-git clone https://github.com/wyg0710/visual-explainer.git "$HOME/.agents/skills/visual-explainer"
+git clone https://github.com/wyg0710/visual-sensemaker.git "$HOME/.agents/skills/visual-sensemaker"
 ```
 
 For a repository-scoped installation, copy or clone it to:
 
 ```text
-<repository>/.agents/skills/visual-explainer/
+<repository>/.agents/skills/visual-sensemaker/
 ```
 
 Codex detects skill changes automatically. If it does not appear, restart Codex.
@@ -62,7 +62,7 @@ Codex detects skill changes automatically. If it does not appear, restart Codex.
 Python 3.9 or newer is recommended. The checker uses only the standard library.
 
 ```bash
-python scripts/check_svg.py examples/visual-explainer-workflow.svg
+python scripts/check_svg.py examples/visual-sensemaker-workflow.svg
 python -m unittest discover -s tests -v
 ```
 
@@ -71,7 +71,7 @@ The checker verifies XML structure, viewBox, accessibility metadata, duplicate I
 ## Repository structure
 
 ```text
-visual-explainer/
+visual-sensemaker/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── assets/logo.svg

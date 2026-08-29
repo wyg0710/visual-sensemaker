@@ -1,6 +1,6 @@
 interface:
-  display_name: "Visual Explainer"
+  display_name: "Visual Sensemaker"
   short_description: "Turn complex information into clear editable visuals"
   icon_large: "./assets/logo.svg"
   brand_color: "#2563EB"
-  default_prompt: "Use $visual-explainer to turn this information into a clear, accurate, editable visual."
+  default_prompt: "Use $visual-sensemaker to turn this information into a clear, accurate, editable visual."

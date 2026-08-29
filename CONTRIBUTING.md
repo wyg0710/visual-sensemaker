@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping make Visual Explainer more accurate and useful.
+Thank you for helping make Visual Sensemaker more accurate and useful.
 
 ## Good contributions
 

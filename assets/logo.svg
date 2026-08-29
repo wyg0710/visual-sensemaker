@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="logo-title logo-desc">
-  <title id="logo-title">Visual Explainer logo</title>
+  <title id="logo-title">Visual Sensemaker logo</title>
   <desc id="logo-desc">A rounded blue and violet tile containing a connected rising line and five nodes.</desc>
   <defs>
     <linearGradient id="logo-gradient" x1="48" y1="48" x2="464" y2="464" gradientUnits="userSpaceOnUse">

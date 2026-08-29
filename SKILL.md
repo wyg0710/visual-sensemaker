@@ -1,9 +1,9 @@
 ---
-name: visual-explainer
+name: visual-sensemaker
 description: Transform text, notes, tables, or structured data into clear, accurate, editable visual explanations. Use when a user asks to visualize, diagram, map, compare, summarize visually, or turn information into a flowchart, timeline, hierarchy, concept map, comparison, or basic data chart. Do not use for photo editing, decorative artwork, CAD, or specialized plots that require domain-specific conventions.
 ---
 
-# Visual Explainer
+# Visual Sensemaker
 
 Turn information into a visual that makes its structure easier to understand without changing its meaning.
 

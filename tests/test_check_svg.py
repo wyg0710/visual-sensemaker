@@ -24,7 +24,7 @@ class CheckSvgTests(unittest.TestCase):
         return Path(temporary.name)
 
     def test_repository_example_has_no_errors(self) -> None:
-        path = ROOT / "examples" / "visual-explainer-workflow.svg"
+        path = ROOT / "examples" / "visual-sensemaker-workflow.svg"
         findings = CHECK_SVG.check_svg(path)
         self.assertEqual([], [finding for finding in findings if finding.level == "error"])
 
