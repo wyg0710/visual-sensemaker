@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Visual Explainer logo</title>
+  <desc id="logo-desc">A rounded blue and violet tile containing a connected rising line and five nodes.</desc>
+  <defs>
+    <linearGradient id="logo-gradient" x1="48" y1="48" x2="464" y2="464" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="logo-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="48" y="42" width="416" height="416" rx="108" fill="url(#logo-gradient)" filter="url(#logo-shadow)"/>
+  <path d="M132 314 L208 234 L272 286 L378 174" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="132" cy="314" r="22" fill="#FFFFFF"/>
+  <circle cx="208" cy="234" r="22" fill="#FFFFFF"/>
+  <circle cx="272" cy="286" r="22" fill="#FFFFFF"/>
+  <circle cx="378" cy="174" r="22" fill="#FFFFFF"/>
+  <circle cx="378" cy="174" r="9" fill="#7C3AED"/>
+</svg>

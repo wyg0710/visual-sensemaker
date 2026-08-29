@@ -1,0 +1,6 @@
+interface:
+  display_name: "Visual Explainer"
+  short_description: "Turn complex information into clear editable visuals"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#2563EB"
+  default_prompt: "Use $visual-explainer to turn this information into a clear, accurate, editable visual."
