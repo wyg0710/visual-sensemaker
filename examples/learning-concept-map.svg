@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="learning-title learning-desc">
+  <title id="learning-title">高效学习的五个组成部分</title>
+  <desc id="learning-desc">一张概念图，以高效学习为中心，连接明确目标、主动输入、加工理解、输出检验和复盘调整五个组成部分。</desc>
+  <defs>
+    <linearGradient id="learning-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="learning-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#F8FAFC"/>
+
+  <g id="heading">
+    <text x="64" y="82" fill="#0F172A" font-family="Inter, Segoe UI, Microsoft YaHei, Arial, sans-serif" font-size="38" font-weight="700">高效学习，不只是“多看几遍”</text>
+    <text x="64" y="122" fill="#475569" font-family="Inter, Segoe UI, Microsoft YaHei, Arial, sans-serif" font-size="19">五个相互关联的组成部分，帮助信息真正转化为理解与能力</text>
+    <rect x="64" y="150" width="1072" height="4" rx="2" fill="url(#learning-header)"/>
+  </g>
+
+  <g id="connectors" fill="none" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" aria-hidden="true">
+    <path d="M600 394 C500 330 400 292 300 276"/>
+    <path d="M600 394 C500 408 402 438 300 468"/>
+    <path d="M600 394 V622"/>
+    <path d="M600 394 C700 408 798 438 900 468"/>
+    <path d="M600 394 C700 330 800 292 900 276"/>
+  </g>
+
+  <g id="center" transform="translate(452 294)" filter="url(#learning-shadow)" font-family="Inter, Segoe UI, Microsoft YaHei, Arial, sans-serif">
+    <rect width="296" height="200" rx="40" fill="url(#learning-header)"/>
+    <text x="148" y="91" text-anchor="middle" fill="#FFFFFF" font-size="34" font-weight="700">高效学习</text>
+    <text x="148" y="133" text-anchor="middle" fill="#E0E7FF" font-size="17">目标 · 输入 · 理解</text>
+    <text x="148" y="161" text-anchor="middle" fill="#E0E7FF" font-size="17">输出 · 复盘</text>
+  </g>
+
+  <g id="concepts" font-family="Inter, Segoe UI, Microsoft YaHei, Arial, sans-serif">
+    <g id="goal" transform="translate(76 190)" filter="url(#learning-shadow)">
+      <rect width="224" height="172" rx="24" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+      <circle cx="38" cy="38" r="18" fill="#DBEAFE"/>
+      <text x="38" y="45" text-anchor="middle" fill="#1D4ED8" font-size="18" font-weight="700">1</text>
+      <text x="28" y="88" fill="#0F172A" font-size="23" font-weight="700">明确目标</text>
+      <text x="28" y="122" fill="#475569" font-size="16">知道要解决什么</text>
+      <text x="28" y="148" fill="#475569" font-size="16">定义可检查的结果</text>
+    </g>
+
+    <g id="input" transform="translate(76 406)" filter="url(#learning-shadow)">
+      <rect width="224" height="172" rx="24" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="2"/>
+      <circle cx="38" cy="38" r="18" fill="#EDE9FE"/>
+      <text x="38" y="45" text-anchor="middle" fill="#6D28D9" font-size="18" font-weight="700">2</text>
+      <text x="28" y="88" fill="#0F172A" font-size="23" font-weight="700">主动输入</text>
+      <text x="28" y="122" fill="#475569" font-size="16">带着问题阅读或听讲</text>
+      <text x="28" y="148" fill="#475569" font-size="16">识别关键概念</text>
+    </g>
+
+    <g id="review" transform="translate(488 590)" filter="url(#learning-shadow)">
+      <rect width="224" height="150" rx="24" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+      <circle cx="38" cy="38" r="18" fill="#DCFCE7"/>
+      <text x="38" y="45" text-anchor="middle" fill="#15803D" font-size="18" font-weight="700">5</text>
+      <text x="28" y="88" fill="#FFFFFF" font-size="23" font-weight="700">复盘调整</text>
+      <text x="28" y="122" fill="#CBD5E1" font-size="16">依据反馈改进方法</text>
+    </g>
+
+    <g id="output" transform="translate(900 406)" filter="url(#learning-shadow)">
+      <rect width="224" height="172" rx="24" fill="#FFFFFF" stroke="#FED7AA" stroke-width="2"/>
+      <circle cx="38" cy="38" r="18" fill="#FFEDD5"/>
+      <text x="38" y="45" text-anchor="middle" fill="#C2410C" font-size="18" font-weight="700">4</text>
+      <text x="28" y="88" fill="#0F172A" font-size="23" font-weight="700">输出检验</text>
+      <text x="28" y="122" fill="#475569" font-size="16">练习、解释或应用</text>
+      <text x="28" y="148" fill="#475569" font-size="16">暴露理解缺口</text>
+    </g>
+
+    <g id="processing" transform="translate(900 190)" filter="url(#learning-shadow)">
+      <rect width="224" height="172" rx="24" fill="#FFFFFF" stroke="#99F6E4" stroke-width="2"/>
+      <circle cx="38" cy="38" r="18" fill="#CCFBF1"/>
+      <text x="38" y="45" text-anchor="middle" fill="#0F766E" font-size="18" font-weight="700">3</text>
+      <text x="28" y="88" fill="#0F172A" font-size="23" font-weight="700">加工理解</text>
+      <text x="28" y="122" fill="#475569" font-size="16">比较、关联与提问</text>
+      <text x="28" y="148" fill="#475569" font-size="16">形成自己的结构</text>
+    </g>
+  </g>
+
+  <text x="1124" y="752" text-anchor="end" fill="#64748B" font-family="Inter, Segoe UI, Microsoft YaHei, Arial, sans-serif" font-size="14">示例概念图 · 各部分共同支持中心主题</text>
+</svg>

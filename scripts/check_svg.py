@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import glob
 import json
 import re
 import sys
@@ -121,15 +122,30 @@ def check_svg(path: Path) -> list[Finding]:
     return findings
 
 
+def expand_paths(patterns: Iterable[str]) -> list[Path]:
+    """Expand shell-style file patterns consistently across platforms."""
+    expanded: list[Path] = []
+    seen: set[Path] = set()
+    for pattern in patterns:
+        candidates = [Path(match) for match in sorted(glob.glob(pattern))]
+        if not candidates:
+            candidates = [Path(pattern)]
+        for path in candidates:
+            if path not in seen:
+                expanded.append(path)
+                seen.add(path)
+    return expanded
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("paths", nargs="+", type=Path, help="SVG files to check")
+    parser.add_argument("paths", nargs="+", help="SVG files or glob patterns to check")
     parser.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
     args = parser.parse_args()
 
     report: dict[str, list[dict[str, str]]] = {}
     has_error = False
-    for path in args.paths:
+    for path in expand_paths(args.paths):
         findings = check_svg(path)
         report[str(path)] = [asdict(finding) for finding in findings]
         has_error = has_error or any(finding.level == "error" for finding in findings)

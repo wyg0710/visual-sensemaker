@@ -23,10 +23,21 @@ class CheckSvgTests(unittest.TestCase):
         self.addCleanup(Path(temporary.name).unlink, missing_ok=True)
         return Path(temporary.name)
 
-    def test_repository_example_has_no_errors(self) -> None:
-        path = ROOT / "examples" / "visual-sensemaker-workflow.svg"
-        findings = CHECK_SVG.check_svg(path)
-        self.assertEqual([], [finding for finding in findings if finding.level == "error"])
+    def test_repository_svgs_have_no_errors(self) -> None:
+        paths = sorted((ROOT / "examples").glob("*.svg")) + sorted((ROOT / "assets").glob("*.svg"))
+        self.assertTrue(paths, "No repository SVG files were found")
+        for path in paths:
+            with self.subTest(path=path.relative_to(ROOT)):
+                findings = CHECK_SVG.check_svg(path)
+                self.assertEqual([], [finding for finding in findings if finding.level == "error"])
+
+    def test_expand_paths_supports_globs(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "b.svg").write_text("<svg/>", encoding="utf-8")
+            (root / "a.svg").write_text("<svg/>", encoding="utf-8")
+            paths = CHECK_SVG.expand_paths([str(root / "*.svg")])
+            self.assertEqual(["a.svg", "b.svg"], [path.name for path in paths])
 
     def test_missing_viewbox_is_an_error(self) -> None:
         path = self.write_svg(

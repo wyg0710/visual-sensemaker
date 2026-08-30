@@ -2,9 +2,26 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
+[![CI](https://github.com/wyg0710/visual-sensemaker/actions/workflows/ci.yml/badge.svg)](https://github.com/wyg0710/visual-sensemaker/actions/workflows/ci.yml)
+
 Turn text, notes, tables, documents, and structured data into clear, accurate, editable visual explanations.
 
 ![Visual Sensemaker workflow](examples/visual-sensemaker-workflow.svg)
+
+## See what it makes
+
+All examples below are editable, dependency-free SVG files produced from ordinary-language requests.
+
+| Flowchart | Concept map | Comparison |
+|---|---|---|
+| [![Problem-solving flowchart](examples/problem-solving-process.svg)](examples/problem-solving-process.svg) | [![Learning concept map](examples/learning-concept-map.svg)](examples/learning-concept-map.svg) | [![Task-tool comparison](examples/task-tool-comparison.svg)](examples/task-tool-comparison.svg) |
+| Preserve a sequence | Reveal related concepts | Compare shared criteria |
+
+## Try it in one prompt
+
+```text
+Use $visual-sensemaker to turn "identify the problem → gather information → analyze causes → develop a plan → execute → review" into a clear, editable SVG flowchart.
+```
 
 Visual Sensemaker is an Agent Skill that chooses a visual structure from the relationships in the source material. Users can describe the outcome in ordinary language instead of deciding whether they need a flowchart, timeline, comparison, hierarchy, concept map, or data chart.
 
@@ -12,7 +29,7 @@ Visual Sensemaker is an Agent Skill that chooses a visual structure from the rel
 
 Visual generation often fails in two ways: a polished graphic changes the source meaning, or an accurate graphic is too dense to understand. This skill treats semantic fidelity, visual routing, accessibility, and render inspection as one workflow.
 
-## Example prompts
+## More example prompts
 
 ```text
 Use $visual-sensemaker to turn these meeting notes into a decision flowchart.
@@ -30,7 +47,7 @@ Use $visual-sensemaker to turn this chapter into a one-page concept map for revi
 Use $visual-sensemaker to inspect this CSV, choose an honest chart, and explain the main pattern.
 ```
 
-## What v0.1 provides
+## What it provides
 
 - relationship-based routing across six visual structures;
 - SVG-first editable output with HTML and Mermaid options;
@@ -43,11 +60,20 @@ This is not a photo editor, illustration generator, CAD tool, or replacement for
 
 ## Install in Codex
 
-Clone the repository into your user skills directory:
+Ask Codex to install the current repository version:
+
+```text
+Use skill-installer to install the visual-sensemaker skill from the repository root:
+https://github.com/wyg0710/visual-sensemaker
+```
+
+Or clone it into your Codex user skills directory:
 
 ```bash
-git clone https://github.com/wyg0710/visual-sensemaker.git "$HOME/.agents/skills/visual-sensemaker"
+git clone --depth 1 https://github.com/wyg0710/visual-sensemaker.git "${CODEX_HOME:-$HOME/.codex}/skills/visual-sensemaker"
 ```
+
+For a reproducible installation, select a version from [Releases](https://github.com/wyg0710/visual-sensemaker/releases) and add `--branch <tag>`.
 
 For a repository-scoped installation, copy or clone it to:
 
@@ -62,7 +88,7 @@ Codex detects skill changes automatically. If it does not appear, restart Codex.
 Python 3.9 or newer is recommended. The checker uses only the standard library.
 
 ```bash
-python scripts/check_svg.py examples/visual-sensemaker-workflow.svg
+python scripts/check_svg.py examples/*.svg assets/*.svg
 python -m unittest discover -s tests -v
 ```
 
@@ -79,6 +105,7 @@ visual-sensemaker/
 ├── scripts/check_svg.py
 ├── examples/
 ├── tests/
+├── .github/workflows/ci.yml
 ├── README.md
 └── LICENSE
 ```

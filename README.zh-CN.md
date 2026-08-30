@@ -2,9 +2,26 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
+[![CI](https://github.com/wyg0710/visual-sensemaker/actions/workflows/ci.yml/badge.svg)](https://github.com/wyg0710/visual-sensemaker/actions/workflows/ci.yml)
+
 把文本、笔记、表格、文档和结构化数据转换成清晰、准确、可编辑的视觉解释图。
 
 ![Visual Sensemaker 工作流程](examples/visual-sensemaker-workflow.svg)
+
+## 看看它能生成什么
+
+下面的案例均由自然语言请求生成，并保留为无外部依赖、可继续编辑的 SVG 文件。
+
+| 流程图 | 概念图 | 对比图 |
+|---|---|---|
+| [![问题解决流程图](examples/problem-solving-process.svg)](examples/problem-solving-process.svg) | [![学习概念图](examples/learning-concept-map.svg)](examples/learning-concept-map.svg) | [![任务工具对比图](examples/task-tool-comparison.svg)](examples/task-tool-comparison.svg) |
+| 保留步骤顺序 | 展示概念关联 | 按共同维度比较 |
+
+## 一句话试用
+
+```text
+使用 $visual-sensemaker，把“发现问题→收集资料→分析原因→制定方案→执行→复盘”制作成一张清晰、可编辑的中文 SVG 流程图。
+```
 
 Visual Sensemaker 是一个 Agent Skill。它根据源信息中的关系自动选择视觉结构，因此用户可以直接描述目标，而不必预先判断应该使用流程图、时间线、对比图、层级图、概念图还是数据图表。
 
@@ -12,7 +29,7 @@ Visual Sensemaker 是一个 Agent Skill。它根据源信息中的关系自动�
 
 视觉生成经常出现两个问题：图很漂亮，但改变了原始信息的含义；或者内容准确，却过于拥挤，难以理解。本 Skill 把语义忠实性、图形路由、可访问性和渲染检查放在同一套工作流程中。
 
-## 使用示例
+## 更多使用示例
 
 ```text
 使用 $visual-sensemaker 把这些会议记录转换成决策流程图。
@@ -30,7 +47,7 @@ Visual Sensemaker 是一个 Agent Skill。它根据源信息中的关系自动�
 使用 $visual-sensemaker 检查这个 CSV，选择不误导的图表并解释主要趋势。
 ```
 
-## v0.1 提供的能力
+## 主要能力
 
 - 根据关系类型在六类视觉结构之间自动路由；
 - 默认输出可编辑 SVG，并可选择 HTML 或 Mermaid；
@@ -43,11 +60,20 @@ Visual Sensemaker 是一个 Agent Skill。它根据源信息中的关系自动�
 
 ## 安装到 Codex
 
-将仓库克隆到用户级 Skill 目录：
+直接让 Codex 安装仓库当前版本：
+
+```text
+请使用 skill-installer，从以下仓库根目录安装 visual-sensemaker skill：
+https://github.com/wyg0710/visual-sensemaker
+```
+
+也可以把仓库克隆到 Codex 用户级 Skill 目录：
 
 ```bash
-git clone https://github.com/wyg0710/visual-sensemaker.git "$HOME/.agents/skills/visual-sensemaker"
+git clone --depth 1 https://github.com/wyg0710/visual-sensemaker.git "${CODEX_HOME:-$HOME/.codex}/skills/visual-sensemaker"
 ```
+
+如果需要固定版本，请从 [Releases](https://github.com/wyg0710/visual-sensemaker/releases) 选择标签，并在命令中加入 `--branch <标签>`。
 
 如果只希望在一个仓库中使用，请复制或克隆到：
 
@@ -62,7 +88,7 @@ Codex 通常会自动检测 Skill 变化；如果没有出现，请重启 Codex�
 建议使用 Python 3.9 或更高版本。校验器只使用 Python 标准库。
 
 ```bash
-python scripts/check_svg.py examples/visual-sensemaker-workflow.svg
+python scripts/check_svg.py examples/*.svg assets/*.svg
 python -m unittest discover -s tests -v
 ```
 

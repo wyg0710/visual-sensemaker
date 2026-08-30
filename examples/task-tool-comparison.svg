@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="compare-title compare-desc">
+  <title id="compare-title">三类任务管理方式的适用场景比较</title>
+  <desc id="compare-desc">一张三列比较图，从优势、限制和适合场景三个共同维度，对比纸笔、电子表格和专业任务工具。</desc>
+  <defs>
+    <linearGradient id="compare-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="compare-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="#F8FAFC"/>
+
+  <g id="heading" font-family="Inter, Segoe UI, Microsoft YaHei, Arial, sans-serif">
+    <rect x="56" y="48" width="1088" height="132" rx="26" fill="url(#compare-header)"/>
+    <text x="88" y="103" fill="#FFFFFF" font-size="34" font-weight="700">任务管理方式：按需求选择</text>
+    <text x="88" y="143" fill="#E0E7FF" font-size="18">同一套维度比较三种常见方式，没有一种工具适合所有场景</text>
+  </g>
+
+  <g id="comparison-cards" font-family="Inter, Segoe UI, Microsoft YaHei, Arial, sans-serif">
+    <g id="paper" transform="translate(56 224)" filter="url(#compare-shadow)">
+      <rect width="336" height="496" rx="28" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="2"/>
+      <rect width="336" height="96" rx="28" fill="#EFF6FF"/>
+      <rect y="68" width="336" height="28" fill="#EFF6FF"/>
+      <circle cx="48" cy="48" r="22" fill="#DBEAFE"/>
+      <text x="48" y="56" text-anchor="middle" fill="#1D4ED8" font-size="23" font-weight="700">1</text>
+      <text x="88" y="58" fill="#0F172A" font-size="26" font-weight="700">纸笔</text>
+      <text x="28" y="142" fill="#1D4ED8" font-size="17" font-weight="700">优势</text>
+      <text x="28" y="177" fill="#334155" font-size="17">• 上手直接</text>
+      <text x="28" y="207" fill="#334155" font-size="17">• 不依赖设备或网络</text>
+      <line x1="28" y1="238" x2="308" y2="238" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="28" y="278" fill="#B45309" font-size="17" font-weight="700">限制</text>
+      <text x="28" y="313" fill="#334155" font-size="17">• 不便跨设备同步</text>
+      <text x="28" y="343" fill="#334155" font-size="17">• 协作和检索能力有限</text>
+      <line x1="28" y1="374" x2="308" y2="374" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="28" y="414" fill="#15803D" font-size="17" font-weight="700">适合</text>
+      <text x="28" y="449" fill="#334155" font-size="17">个人短期清单、随手记录</text>
+    </g>
+
+    <g id="spreadsheet" transform="translate(432 224)" filter="url(#compare-shadow)">
+      <rect width="336" height="496" rx="28" fill="#FFFFFF" stroke="#99F6E4" stroke-width="2"/>
+      <rect width="336" height="96" rx="28" fill="#F0FDFA"/>
+      <rect y="68" width="336" height="28" fill="#F0FDFA"/>
+      <circle cx="48" cy="48" r="22" fill="#CCFBF1"/>
+      <text x="48" y="56" text-anchor="middle" fill="#0F766E" font-size="23" font-weight="700">2</text>
+      <text x="88" y="58" fill="#0F172A" font-size="26" font-weight="700">电子表格</text>
+      <text x="28" y="142" fill="#0F766E" font-size="17" font-weight="700">优势</text>
+      <text x="28" y="177" fill="#334155" font-size="17">• 可排序、筛选和统计</text>
+      <text x="28" y="207" fill="#334155" font-size="17">• 字段结构灵活</text>
+      <line x1="28" y1="238" x2="308" y2="238" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="28" y="278" fill="#B45309" font-size="17" font-weight="700">限制</text>
+      <text x="28" y="313" fill="#334155" font-size="17">• 需要持续手动维护</text>
+      <text x="28" y="343" fill="#334155" font-size="17">• 复杂流程展示较弱</text>
+      <line x1="28" y1="374" x2="308" y2="374" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="28" y="414" fill="#15803D" font-size="17" font-weight="700">适合</text>
+      <text x="28" y="449" fill="#334155" font-size="17">结构化清单、轻量项目跟踪</text>
+    </g>
+
+    <g id="specialized" transform="translate(808 224)" filter="url(#compare-shadow)">
+      <rect width="336" height="496" rx="28" fill="#0F172A" stroke="#0F172A" stroke-width="2"/>
+      <rect width="336" height="96" rx="28" fill="#1E293B"/>
+      <rect y="68" width="336" height="28" fill="#1E293B"/>
+      <circle cx="48" cy="48" r="22" fill="#EDE9FE"/>
+      <text x="48" y="56" text-anchor="middle" fill="#6D28D9" font-size="23" font-weight="700">3</text>
+      <text x="88" y="58" fill="#FFFFFF" font-size="26" font-weight="700">专业任务工具</text>
+      <text x="28" y="142" fill="#C4B5FD" font-size="17" font-weight="700">优势</text>
+      <text x="28" y="177" fill="#E2E8F0" font-size="17">• 提醒、状态和协作集中</text>
+      <text x="28" y="207" fill="#E2E8F0" font-size="17">• 支持模板与自动化</text>
+      <line x1="28" y1="238" x2="308" y2="238" stroke="#475569" stroke-width="2"/>
+      <text x="28" y="278" fill="#FCD34D" font-size="17" font-weight="700">限制</text>
+      <text x="28" y="313" fill="#E2E8F0" font-size="17">• 配置和学习成本较高</text>
+      <text x="28" y="343" fill="#E2E8F0" font-size="17">• 可能产生额外订阅费用</text>
+      <line x1="28" y1="374" x2="308" y2="374" stroke="#475569" stroke-width="2"/>
+      <text x="28" y="414" fill="#86EFAC" font-size="17" font-weight="700">适合</text>
+      <text x="28" y="449" fill="#E2E8F0" font-size="17">多人协作、长期复杂项目</text>
+    </g>
+  </g>
+
+  <text x="1144" y="768" text-anchor="end" fill="#64748B" font-family="Inter, Segoe UI, Microsoft YaHei, Arial, sans-serif" font-size="14">示例性比较 · 实际选择仍取决于团队规模、流程和预算</text>
+</svg>
